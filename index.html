@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Splendor and Grace Hair Studio · Sandwich, IL</title>
+  <meta name="description" content="Splendor and Grace Hair Studio in Sandwich, Illinois — cuts, color, balayage, styling. Book online with Fresha. 40 E Church St." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fdf9f3;
+      --cream-deep: #f6efe3;
+      --blush: #f0d8d2;
+      --blush-soft: #fae8e3;
+      --charcoal: #2c2620;
+      --charcoal-soft: #5a4f47;
+      --muted: #8a7d72;
+      --rose-gold: #b8896f;
+      --rose-deep: #8b3a4d;
+      --gold: #c9a96e;
+      --line: rgba(184, 137, 111, 0.18);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+    .display { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+    .script { font-family: 'Pinyon Script', cursive; }
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(253, 249, 243, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 0;
+    }
+    .brand {
+      display: flex; align-items: baseline; gap: 6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600; letter-spacing: 0.01em;
+      color: var(--charcoal);
+    }
+    .brand .amp { font-family: 'Pinyon Script', cursive; font-size: 28px; color: var(--rose-gold); padding: 0 2px; line-height: 0.8; }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .nav-links { display: flex; gap: 26px; list-style: none; }
+    .nav-links a {
+      color: var(--charcoal-soft);
+      font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
+      transition: color 200ms;
+    }
+    .nav-links a:hover { color: var(--rose-deep); }
+    .book-btn {
+      background: var(--rose-deep); color: var(--cream);
+      padding: 12px 26px;
+      font-family: 'Lora', serif; font-weight: 600; font-size: 14px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 200ms, transform 150ms, box-shadow 200ms;
+      box-shadow: 0 4px 12px -4px rgba(139, 58, 77, 0.4);
+      animation: gentle-pulse 2.8s ease-in-out infinite;
+    }
+    .book-btn:hover {
+      background: #6e2a3a;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px -4px rgba(139, 58, 77, 0.5);
+    }
+    @keyframes gentle-pulse {
+      0%, 100% { box-shadow: 0 4px 12px -4px rgba(139, 58, 77, 0.4); }
+      50% { box-shadow: 0 4px 22px -2px rgba(139, 58, 77, 0.65); }
+    }
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      padding: 90px 0 110px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -10%; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, var(--blush-soft) 0%, transparent 65%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero > .container { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase;
+      color: var(--rose-gold); font-weight: 600;
+      margin-bottom: 28px;
+      display: inline-flex; align-items: center; gap: 14px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; width: 28px; height: 1px; background: var(--rose-gold);
+    }
+    h1.hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(54px, 9vw, 110px);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    h1.hero-name .amp {
+      font-family: 'Pinyon Script', cursive;
+      font-weight: 400;
+      color: var(--rose-gold);
+      font-size: 0.82em;
+      padding: 0 6px;
+      line-height: 0.7;
+      vertical-align: -0.07em;
+    }
+    .hero-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--charcoal-soft);
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .hero-loc {
+      font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--muted); font-weight: 500;
+      margin-bottom: 44px;
+    }
+    .hero-cta-row {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    }
+    .hero .book-btn {
+      font-size: 16px; padding: 18px 40px; letter-spacing: 0.08em;
+    }
+    .call-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 18px 30px;
+      border: 1px solid var(--rose-gold);
+      color: var(--charcoal);
+      font-family: 'Lora', serif; font-weight: 500; font-size: 15px;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      transition: background 200ms, border-color 200ms;
+    }
+    .call-link:hover { background: var(--blush-soft); border-color: var(--rose-deep); }
+    .call-link svg { width: 16px; height: 16px; color: var(--rose-gold); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 100px 0; position: relative; }
+    .section-head {
+      text-align: center; margin-bottom: 56px;
+    }
+    .section-eyebrow {
+      font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase;
+      color: var(--rose-gold); font-weight: 600;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 500; letter-spacing: -0.01em; line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    h2 em { color: var(--rose-gold); font-style: italic; font-weight: 400; }
+    .section-sub {
+      font-size: 18px; color: var(--charcoal-soft);
+      max-width: 600px; margin: 0 auto;
+    }
+
+    /* ---------- SERVICES ---------- */
+    .services { background: var(--cream-deep); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 80px;
+      max-width: 760px; margin: 0 auto;
+    }
+    .service-row {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 500;
+      color: var(--charcoal);
+      flex-shrink: 0;
+    }
+    .service-dot {
+      flex: 1;
+      border-bottom: 1px dotted var(--rose-gold);
+      opacity: 0.4;
+      margin-bottom: 6px;
+    }
+    .service-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600;
+      color: var(--rose-deep);
+      flex-shrink: 0;
+    }
+    .service-price .stub { color: var(--rose-gold); font-size: 0.75em; vertical-align: 0.2em; margin-left: 1px; }
+    .service-desc {
+      grid-column: 1 / -1;
+      font-style: italic; font-size: 14px; color: var(--muted);
+      margin-top: 2px;
+    }
+    .pricing-note {
+      text-align: center; margin-top: 40px;
+      font-size: 13px; color: var(--muted); font-style: italic;
+    }
+    @media (max-width: 720px) {
+      .services-grid { grid-template-columns: 1fr; gap: 0; }
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-img {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(135deg, var(--blush-soft) 0%, var(--cream-deep) 100%);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-img-inner {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 100px; color: var(--rose-gold);
+      opacity: 0.6;
+      line-height: 1;
+    }
+    .about-text .display { font-size: clamp(28px, 3.5vw, 40px); margin-bottom: 24px; line-height: 1.15; }
+    .about-text p { color: var(--charcoal-soft); margin-bottom: 18px; }
+    .about-text .signature {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 32px; color: var(--rose-deep);
+      margin-top: 20px;
+    }
+    @media (max-width: 820px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-img { aspect-ratio: 4 / 3; }
+    }
+
+    /* ---------- TESTIMONIALS ---------- */
+    .testimonials { background: var(--cream-deep); }
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .quote {
+      padding: 32px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .quote::before {
+      content: '“';
+      position: absolute; top: 0; left: 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 90px; color: var(--rose-gold);
+      line-height: 1; opacity: 0.4;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 19px;
+      color: var(--charcoal); line-height: 1.45;
+      margin-bottom: 20px; margin-top: 30px;
+      position: relative; z-index: 1;
+    }
+    .quote-author { font-size: 13px; color: var(--rose-deep); font-weight: 600; letter-spacing: 0.05em; }
+    .quote-stars { color: var(--gold); font-size: 14px; letter-spacing: 0.15em; margin-bottom: 6px; }
+    @media (max-width: 820px) {
+      .quote-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- VISIT (hours, address, map) ---------- */
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .info-block { padding: 0; }
+    .info-label {
+      font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--rose-gold); font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .info-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .info-block address, .info-block p {
+      font-style: normal;
+      color: var(--charcoal-soft);
+      margin-bottom: 8px;
+    }
+    .info-block a { color: var(--rose-deep); }
+    .info-block a:hover { text-decoration: underline; }
+    .hours-table { margin-top: 18px; width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px dashed var(--line); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { padding: 12px 0; color: var(--charcoal-soft); font-size: 15px; }
+    .hours-table td:first-child { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 500; color: var(--charcoal); }
+    .hours-table td:last-child { text-align: right; }
+    .hours-stub-note {
+      font-size: 12px; color: var(--muted); font-style: italic;
+      margin-top: 16px;
+    }
+    .map-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--line);
+      filter: saturate(0.7) brightness(1.02);
+    }
+    @media (max-width: 820px) {
+      .visit-grid { grid-template-columns: 1fr; gap: 50px; }
+    }
+
+    /* ---------- PRE-FOOTER CTA BAND ---------- */
+    .cta-band {
+      background: linear-gradient(135deg, var(--rose-deep) 0%, #6e2a3a 100%);
+      color: var(--cream);
+      text-align: center;
+      padding: 80px 0;
+    }
+    .cta-band h2 {
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .cta-band h2 em { color: var(--blush); }
+    .cta-band p {
+      color: rgba(253, 249, 243, 0.85);
+      max-width: 540px; margin: 0 auto 32px;
+    }
+    .cta-band .book-btn {
+      background: var(--cream); color: var(--rose-deep);
+      font-size: 16px; padding: 18px 44px; letter-spacing: 0.08em;
+      animation: none;
+      box-shadow: 0 8px 24px -8px rgba(0,0,0,0.3);
+    }
+    .cta-band .book-btn:hover {
+      background: var(--blush);
+      color: var(--rose-deep);
+      box-shadow: 0 12px 32px -8px rgba(0,0,0,0.4);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 60px 0 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px; font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .footer-brand .amp { font-family: 'Pinyon Script', cursive; color: var(--gold); padding: 0 4px; font-size: 32px; line-height: 0.7; }
+    .footer-tag { color: rgba(253,249,243,0.55); font-style: italic; font-size: 15px; }
+    .footer-col h4 {
+      font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .footer-col p, .footer-col a {
+      color: rgba(253,249,243,0.75);
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    .footer-col a:hover { color: var(--blush); }
+    .footer-socials {
+      display: flex; gap: 16px; margin-top: 18px;
+    }
+    .footer-socials a {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(253,249,243,0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 200ms, background 200ms;
+    }
+    .footer-socials a:hover { border-color: var(--gold); background: rgba(201,169,110,0.1); }
+    .footer-socials svg { width: 16px; height: 16px; color: var(--cream); }
+    .footer-bottom {
+      border-top: 1px solid rgba(253,249,243,0.12);
+      padding-top: 24px;
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: rgba(253,249,243,0.45);
+      flex-wrap: wrap; gap: 12px;
+    }
+    @media (max-width: 720px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ---------- MOBILE STICKY BOOK BAR ---------- */
+    .mobile-book-bar {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--cream);
+      padding: 14px 16px;
+      box-shadow: 0 -4px 24px rgba(44, 38, 32, 0.12);
+      z-index: 100;
+      border-top: 1px solid var(--line);
+    }
+    .mobile-book-bar .book-btn {
+      width: 100%; display: block; text-align: center;
+      font-size: 16px; padding: 16px;
+      animation: none;
+    }
+    @media (max-width: 820px) {
+      .mobile-book-bar { display: block; }
+      footer { padding-bottom: 100px; }
+    }
+
+    .fade-up {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#" class="brand">Splendor <span class="amp">&amp;</span> Grace</a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#visit">Visit</a></li>
+          </ul>
+          <a href="https://www.fresha.com/lvp/hair-by-hannah-jarka-splendor-and-grace-hair-studio-east-church-street-sandwich-D1548G" target="_blank" rel="noopener" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">A Hair Studio in Downtown Sandwich</div>
+        <h1 class="hero-name">Splendor <span class="amp">&amp;</span> Grace</h1>
+        <div class="hero-tag">Cuts, color, and styling — for every chapter you're in.</div>
+        <div class="hero-loc">40 E Church St · Sandwich, IL</div>
+        <div class="hero-cta-row">
+          <a href="https://www.fresha.com/lvp/hair-by-hannah-jarka-splendor-and-grace-hair-studio-east-church-street-sandwich-D1548G" target="_blank" rel="noopener" class="book-btn">Book on Fresha</a>
+          <a href="tel:8155058051" class="call-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (815) 505-8051
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head fade-up">
+          <div class="section-eyebrow">Services</div>
+          <h2>Tailored to <em>you,</em> not a template.</h2>
+          <p class="section-sub">Every consultation starts the same way — listening. Whether you're refreshing your color or starting completely over, every appointment is built around what you actually want.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-row">
+            <div class="service-name">Women's Cut &amp; Style</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$45<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Men's Cut</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$30<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Single-Process Color</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$85<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Partial Highlights</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$110<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Full Highlights</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$140<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Balayage</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$160<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Color Correction</div>
+            <div class="service-dot"></div>
+            <div class="service-price">Consult<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Blowout</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$35<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Special Event Style</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$65<span class="stub">✱</span></div>
+          </div>
+          <div class="service-row">
+            <div class="service-name">Bridal Trial</div>
+            <div class="service-dot"></div>
+            <div class="service-price">$85<span class="stub">✱</span></div>
+          </div>
+        </div>
+        <div class="pricing-note">✱ Prices shown are placeholders — confirm with the studio before your appointment.</div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img fade-up">
+            <!-- REPLACE WITH REAL PHOTO of the studio interior or stylist at work -->
+            <div class="about-img-inner">S<span style="font-size: 0.7em; padding: 0 8px; color: var(--charcoal-soft);">&amp;</span>G</div>
+          </div>
+          <div class="about-text fade-up">
+            <div class="section-eyebrow" style="margin-bottom: 14px;">About the Studio</div>
+            <div class="display">A small, intentional studio in downtown Sandwich.</div>
+            <p>Splendor and Grace is the kind of place where you sit down, you're handed coffee, and you actually get to talk about what you want before scissors come anywhere near your hair.</p>
+            <p>We work in small batches, by appointment, in a calm space — no rushed walk-ins, no shouting over six other dryers, no upselling you on services you didn't ask about. Just thoughtful cuts and color, in a studio that feels more like someone's living room than a chain salon.</p>
+            <p>If you've been somewhere that just didn't <em>get it</em> — try us once. The first consultation is always free.</p>
+            <div class="signature">— the team</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="reviews" class="testimonials">
+      <div class="container">
+        <div class="section-head fade-up">
+          <div class="section-eyebrow">Reviews</div>
+          <h2>What guests are <em>saying.</em></h2>
+        </div>
+        <div class="quote-grid">
+          <div class="quote fade-up">
+            <div class="quote-stars">★ ★ ★ ★ ★</div>
+            <div class="quote-text">She actually listened to what I wanted instead of doing her own thing. First salon I've left in years where I didn't immediately want to go home and rinse it out.</div>
+            <div class="quote-author">— Megan</div>
+          </div>
+          <div class="quote fade-up">
+            <div class="quote-stars">★ ★ ★ ★ ★</div>
+            <div class="quote-text">Got my balayage done here and the color is unreal — exactly the lived-in look I wanted. The whole vibe of the studio is so calm too. Driving from Yorkville is worth it.</div>
+            <div class="quote-author">— Jess</div>
+          </div>
+          <div class="quote fade-up">
+            <div class="quote-stars">★ ★ ★ ★ ★</div>
+            <div class="quote-text">My wife told me to stop going to the chain place and try here. Got the best haircut I've had in years. Will never go back.</div>
+            <div class="quote-author">— Tom</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VISIT ===== -->
+    <section id="visit">
+      <div class="container">
+        <div class="section-head fade-up">
+          <div class="section-eyebrow">Visit</div>
+          <h2>Stop by — we'd love to <em>meet you.</em></h2>
+        </div>
+        <div class="visit-grid">
+          <div class="info-block fade-up">
+            <div class="info-label">The Studio</div>
+            <h3>40 E Church St</h3>
+            <address>Sandwich, IL 60548</address>
+            <p><a href="tel:8155058051">(815) 505-8051</a></p>
+            <p><a href="https://maps.apple.com/?q=40+E+Church+St+Sandwich+IL+60548" target="_blank" rel="noopener">Open in Maps →</a></p>
+
+            <div class="info-label" style="margin-top: 38px;">Hours</div>
+            <table class="hours-table">
+              <tr><td>Mon</td><td>Closed</td></tr>
+              <tr><td>Tue</td><td>9 — 7</td></tr>
+              <tr><td>Wed</td><td>9 — 7</td></tr>
+              <tr><td>Thu</td><td>9 — 7</td></tr>
+              <tr><td>Fri</td><td>9 — 5</td></tr>
+              <tr><td>Sat</td><td>9 — 3</td></tr>
+              <tr><td>Sun</td><td>Closed</td></tr>
+            </table>
+            <p class="hours-stub-note">✱ Hours shown are placeholders — confirm before booking.</p>
+          </div>
+          <div class="fade-up">
+            <iframe class="map-frame" src="https://www.google.com/maps?q=40+E+Church+St+Sandwich+IL+60548&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRE-FOOTER CTA BAND ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready for a change you'll actually <em>love?</em></h2>
+        <p>Booking on Fresha takes about 30 seconds. Pick a stylist, pick a time, you're set.</p>
+        <a href="https://www.fresha.com/lvp/hair-by-hannah-jarka-splendor-and-grace-hair-studio-east-church-street-sandwich-D1548G" target="_blank" rel="noopener" class="book-btn">Book Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Splendor <span class="amp">&amp;</span> Grace</div>
+          <div class="footer-tag">A small, intentional hair studio in downtown Sandwich, Illinois.</div>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/splendorandgrace/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>40 E Church St</p>
+          <p>Sandwich, IL 60548</p>
+          <a href="tel:8155058051">(815) 505-8051</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick</h4>
+          <a href="https://www.fresha.com/lvp/hair-by-hannah-jarka-splendor-and-grace-hair-studio-east-church-street-sandwich-D1548G" target="_blank" rel="noopener">Book on Fresha</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#visit">Hours &amp; Map</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Splendor and Grace Hair Studio</div>
+        <div>Designed by <a href="https://johnathon-builds.vercel.app" style="color: var(--gold);">Johnathon Builds</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky Book Now bar -->
+  <div class="mobile-book-bar">
+    <a href="https://www.fresha.com/lvp/hair-by-hannah-jarka-splendor-and-grace-hair-studio-east-church-street-sandwich-D1548G" target="_blank" rel="noopener" class="book-btn">Book Now on Fresha</a>
+  </div>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
